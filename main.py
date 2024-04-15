@@ -34,7 +34,7 @@ amour = ["Les gens t'aiment à 0%❤️","Les gens t'aiment à 20%❤️","Les g
 class Bot(BaseBot):
     async def on_start(self, session_metadata: SessionMetadata) -> None:
         print("funcionando")
-        await self.highrise.walk_to(Position(17.5 , 0.0 , 12.5 , "FrontRight"))
+        await self.highrise.walk_to(Position(14.5 , 0.25 , 2.0 , "FrontLeft"))
     async def on_user_join(self, user: User, position: Position | AnchorPosition) -> None:
         print(f"{user.username} entrou na sala")
         wm = [f"Bienvenue {user.username} !",f"Bienvenue {user.username}"]
@@ -1247,29 +1247,29 @@ class Bot(BaseBot):
           await                     self.teleport_to_user(user, target_username)
 
         if message.startswith("!up1"):
-          await self.highrise.teleport(user.id,Position(13.5,8.0,10.5))
+          await self.highrise.teleport(user.id,Position(12.5,9.75,20.5))
 
         if message.startswith("!up2"):
           await self.highrise.teleport(user.id,Position(17.5,14.5,29.5))
 
         if message.startswith("!vip1"):
-          if user.username == "R0__YA" or user.username == "didyousaydonut" or user.username == "Demic._" or user.username == "Mini_sad" or user.username == "f__7oo" or user.username == "H.kakashi" or user.username == "Just_xx" or user.username == "mielX_baby" or user.username == "Ria__Jeyn":
+          if user.username == "R0__YA" or user.username == "didyousaydonut" or user.username == "Demic._" or user.username == "Mini_sad" or user.username == "f__7oo" or user.username == "H.kakashi" or user.username == "alioune_" or user.username == "mielX_baby" or user.username == "Ria__Jeyn":
             await self.highrise.teleport(user.id,Position(4.0,15.75,4.5))
 
         if message.startswith("!vip2"):
-          if user.username == "R0__YA" or user.username == "didyousaydonut" or user.username == "Demic._" or user.username == "Mini_sad" or user.username == "f__7oo" or user.username == "H.kakashi" or user.username == "Just_xx" or user.username == "mielX_baby" or user.username == "Ria__Jeyn":
+          if user.username == "R0__YA" or user.username == "didyousaydonut" or user.username == "Demic._" or user.username == "Mini_sad" or user.username == "f__7oo" or user.username == "H.kakashi" or user.username == "alioune_" or user.username == "mielX_baby" or user.username == "Ria__Jeyn":
             await self.highrise.teleport(user.id,Position(14.5,12.5,21.5))
 
         if message.startswith("!down"):
-          await self.highrise.teleport(user.id,Position(15.5,0.0,11.5))
+          await self.highrise.teleport(user.id,Position(10.5,0.0,1.5))
 
         if                            message.startswith("Summon") or          message.startswith("/summon") or  message.startswith("!summon"):
-          if user.username == "R0__YA" or user.username == "didyousaydonut" or user.username == "Demic._" or user.username == "Mini_sad" or user.username == "f__7oo" or user.username == "n_632" or user.username == "Just_xx" or user.username == "mielX_baby" or user.username == "6xf":
+          if user.username == "R0__YA" or user.username == "didyousaydonut" or user.username == "Demic._" or user.username == "Mini_sad" or user.username == "f__7oo" or user.username == "n_632" or user.username == "alioune_" or user.username == "mielX_baby" or user.username == "6xf":
            target_username = message.split("@")[-1].strip()
            await self.teleport_user_next_to(target_username, user)
     
         if message.startswith("kick"):
-          if user.username == "n_632" or user.username == "R0__YA" or user.username == "Demic._" or user.username == "Mini_sad" or user.username == "f__7oo" or user.username == "6xf" or user.username == "Just_xx":
+          if user.username == "n_632" or user.username == "R0__YA" or user.username == "Demic._" or user.username == "Mini_sad" or user.username == "f__7oo" or user.username == "6xf" or user.username == "alioune_":
               pass
           else:
               await self.highrise.chat("Pas la permission.")
